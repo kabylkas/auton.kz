@@ -255,6 +255,7 @@ $error = 'No error';
         <div class="row">
             <h2></h2>
             <h1 style="color: white; margin: 0px;">Получи свою купонную карту</h1>
+            <h3 style="color: white; margin: 0px;"><center>(Доставка на дом)</center></h3>
             <h1 style="color: white; margin: 0px;">Закажи за 4999 тг</h1><br>
             <div class="cform" id="theme-form">
               <form name="contact_form" action="./request.php" method="post" class="cform-form" onsubmit="javascript: validate_form();">

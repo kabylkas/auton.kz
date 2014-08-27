@@ -38,7 +38,7 @@ div{
   color: #0b333f;
   background-color: #CCCCCC;
   text-align:center;
-  width: 100%;
+  width: 90%;
   height: 70px;
   float: left;
   margin: 10px;
@@ -418,6 +418,17 @@ html, body {
 #red_big {
   color: rgb(158, 32, 33);
   font-size: 60px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#red_big:hover {
+  color: #f0c000;
+  font-size: 61px;
   font-family: 'PT Sans Narrow', sans-serif;
 }
 

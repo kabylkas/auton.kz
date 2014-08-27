@@ -95,7 +95,7 @@ $error = 'No error';
     <script type="text/javascript">
     <!--
 
-    function submit_form()
+    function submit_form(button)
     {
         if (document.contact_form.yourname.value == "")
         {
@@ -105,6 +105,14 @@ $error = 'No error';
         } else if (document.contact_form.youremail.value == ""){
             alert ("Пожалуйста укажи свой адрес");
         } else {
+          if (button == 1)
+          {
+            document.contact_form.option.value = "take_yourself";
+          }
+          else if (button == 2)
+          {
+            document.contact_form.option.value = "bring_me";
+          }
           document.contact_form.submit();
         }
     }
@@ -283,13 +291,16 @@ $error = 'No error';
                 <br>
                 <div style="margin-left: -20px;">
                   <center>
-                    <div class="round-button"><div class="round-button-circle"><a href="javascript: submit_form();" class="round-button">Самовывоз</a></div></div>                  
-                    <div class="round-button"><div class="round-button-circle"><a href="javascript: submit_form();" class="round-button">Доставка на дом (+300тг)</a></div></div>                  
+                    <div style="width:35%; background-color: #123;">
+                      <a href="javascript: submit_form(1);" class="round-button"><div style="padding-top:60px;">Самовывоз</div></a>                 
+                      <a href="javascript: submit_form(2);" class="round-button"><div style="padding-top:53px;">Доставка на дом (+300тг)</div></a>            
+                    </div>     
                   </center>
                 </div>
                 <div class="cform-response-output"></div>
                 </center>
                 <?php $formKey->outputKey(); ?>
+                <input type="hidden" name="option" value="">
               </form>
             </div>
           

@@ -53,7 +53,6 @@ $error = 'No error';
     <script type="text/javascript" src="js/jquery.localscroll-1.2.7-min.js"></script>
     <script type="text/javascript" src="./fancybox/jquery.fancybox-1.3.4.pack.js"></script>
     <script type="text/javascript" src="./fancybox/jquery.fancybox-1.3.4.js"></script>
-    <script type="text/javascript" src="./jquery.bxslider.min.js"></script>
     <!-- prettyPhoto Initialization -->
     <style>
 .bx-wrapper .bx-pager {
@@ -187,10 +186,31 @@ $error = 'No error';
     <div id="headerwrap" style="background-color: #000000;">
       <table id="moto_box">
         <tr>
-          <td>
+          <td style="width:50%">
             <span id="company_name"><img style="width:350px;" src="./img/logo.png"></span><br><br><br>
             <span id="company_moto">Полный уход за твоим авто с экономией 38 000 тг</span><br><br><br>
-            <a href="#services" class="button_next">Узнать больше</a><br><br><br>
+            <div style="text-align: left;">
+            <ul id="company_desc">
+              <li>* Мы объединили для Вас необходимые автоуслуги в одну дисконтную карту.</li>
+              <li>* Автосервисы находятся поблизости.</li>
+              <li>* Вы экономите 38000тг в год</li>
+            </ul>
+            </div>
+        
+            <a href="#explanation" class="button_next">Узнать больше</a><br><br><br>
+          </td>
+          <td style="width:50%">
+            <div class="order_form">
+              <div id="form_title">Получи свою дисконтную карту всего за 4999тг</div>
+              <div style="padding:30px;">
+              <form action="" >
+                <input type="text" name="yourname" placeholder="Имя"  title="твое имя"><br>
+                <input type="text" name="yourphone" placeholder="Телефон"  title="твой телефон"><br>
+                <input type="text" name="youraddress" placeholder="Адрес"  title="твое адрес"><br><br>
+                <input type="submit" value="ЗАКАЗАТЬ">
+              </form>
+              </div>
+            </div>
           </td>
         </tr>
       </table>
@@ -198,17 +218,47 @@ $error = 'No error';
     <!--******************** Shadow ********************-->
     <div id="shadow"></div>
  
-
+    <section id="explanation" class="single-page scrollblock">
+      <h2></h2>
+      <div class="container">
+        <div style="width:100%; text-align:center;"><img src="./img/valeriyanka.png"></div>
+        <div id="mistake_explain">Но вы же не делаете ошибок? Есть автосервисы, которые вы обязаны предоставлять вашему авто каждый год, чтобы содержать его в хорошей форме. Auton собрал именно эти сервисы в одной дисконтной карте. Вы тратите тысячи тенге для предоставления этих услуг. Но если вы хотите тратить меньше, тогда не упустите свою выгоду! Ведь с Auton вы сэкономите 38 000 тг в год.</div>
+        <br>
+        <div id="discount_explain">
+          Вот где вы сэкономите:<br><br>
+          <ul>
+            <li>Химчистка салона с разбором (экономия: 3 000тг)</li>
+            <li>Мойка автомобиля кузов+салон [12 раз] (экономия: 6 000тг)</li>
+            <li>Полировка кузова (экономия: 5 000тг)</li>
+            <li>Полная диагностика автомобиля [2 раза] (экономия: 4 000тг)</li>
+            <li>Замена воздушного фильтра (экономия: 250тг)</li>
+            <li>Замена масла в двигателе [2 раз] (экономия: 1 000тг)</li>
+            <li>Замена масла в коробке передач (экономия: 5 000тг)</li>
+            <li>Замена топливного фильтра (экономия: 500тг)</li>
+            <li>Геометрия колес [2 раза] (экономия: 1 000тг)</li>
+            <li>Шиномонтаж [2 раза] (экономия: 3 000тг)</li>
+            <li>Эвакуатор (экономия: 5 000тг)</li>
+            <li>Отогрев, завод машины (экономия: 5 000тг)</li>
+          </ul>
+        </div>
+        <div id="counter">
+          Но поторопитесь. Это - очень ограниченное предложение.<br>
+          И его срок истечет через:
+        </div>
+      </div>
+    </section>
     <!--******************** Services Section ********************-->
     <section id="services" class="single-page scrollblock">
       <div class="container">
-        <h1>Приобрети 1 купон и получи скидку 38 000 тенге на 12 самых необходимых услуг для твоего автомобиля: </h1>
+        <h1>Приобрети дисконтную карту и получи скидку 38 000 тенге на 12 самых необходимых услуг для твоего автомобиля: </h1>
         <h2>Мы считаем что каждый автомобилист заслуживает такой скидки!</h2><br>
-        <a href="javascript:" >Slide2</a>
-        <ul class="bxslider">
-          <li>
-            <!--row1-->
+            <!-- Column #1 -->
             <div class="coupon_col">
+              <div class="coupon_title">
+                Седан
+              </div>            
+              <div class="coupon_head" style="background: url('./img/sedan.png') no-repeat center; "></div>
+              <br>
               <a class="inline" href="./services/chemical.html">
                 <div class="coupon_box">
                   <div class="coupon_row">Химчистка салона с разбором (1 раз)<br></div>
@@ -233,13 +283,6 @@ $error = 'No error';
                   <div class="coupon_row"><span class="cross">8 000тг</span> <span>4 000тг</span></div>
                 </div>
               </a>
-
-            </div>
-            
-            <!-- Column #2 -->
-            <div class="coupon_col">
-              <center>
-              <!--row2-->
               <a class="inline" href="./services/chemical.html">
                 <div class="coupon_box">
                   <div class="coupon_row">Замена воздушного фильтра (1 раз)</div>
@@ -264,12 +307,6 @@ $error = 'No error';
                   <div class="coupon_row"><span class="cross">1 500тг</span> <span>1 000тг</span></div>
                 </div>
               </a>
-              <a href="#buy1" style="text-decoration: none; line-height:100px;"><span id="red_big"><b>всего за 4999 тг</b></span></a>
-              </center>        
-            </div>
-            
-            <div class="coupon_col">
-              <!--row3-->
               <a class="inline" href="./services/chemical.html">
                 <div class="coupon_box">
                   <div class="coupon_row">Геометрия колес (2 раза x1500тг)</div>
@@ -293,13 +330,172 @@ $error = 'No error';
                   <div class="coupon_row">Отогрев, завод машины (1 раз)</div>
                   <div class="coupon_row"><span class="cross">15 000тг</span> <span>10 000тг</span></div>
                 </div>
-              </a>
+              </a>              
             </div>
-          </li>
-          <li>
-            lkjasdf
-          </li>
-        </ul>
+            
+            <!-- Column #2 -->
+            <div class="coupon_col">
+              <div class="coupon_title">
+                Внедорожник
+              </div>
+              <div class="coupon_head" style="background: url('./img/jeep.png') no-repeat center; "></div>
+              <br>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Химчистка салона с разбором (1 раз)<br></div>
+                  <div class="coupon_row"><span class="cross">13 000тг</span> <span>10 000тг</span></div>
+                </div>
+              </a>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Мойка автомобиля кузов+салон (12 раз x1500тг)</div>
+                  <div class="coupon_row"><span class="cross">18 000тг</span> <span>12 000тг</span></div>
+                </div>
+              </a>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Полировка кузова (1 раз)</div>
+                  <div class="coupon_row"><span class="cross">20 000тг</span> <span>15 000тг</span></div>
+                </div>
+              </a>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Полная диагностика автомобиля (2 раза x4000тг)</div>
+                  <div class="coupon_row"><span class="cross">8 000тг</span> <span>4 000тг</span></div>
+                </div>
+              </a>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Замена воздушного фильтра (1 раз)</div>
+                  <div class="coupon_row"><span class="cross">500тг</span> <span>250тг</span></div>
+                </div>
+              </a>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Замена масла в двигателе (2 раз x1000тг)</div>
+                  <div class="coupon_row"><span class="cross">2 000тг</span> <span>1 000тг</span></div>
+                </div>
+              </a> 
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Замена масла в коробке передач (1 раз)</div>
+                  <div class="coupon_row"><span class="cross">15 000тг</span> <span>10 000тг</span></div>
+                </div>
+              </a>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Замена топливного фильтра (1 раз)</div>
+                  <div class="coupon_row"><span class="cross">1 500тг</span> <span>1 000тг</span></div>
+                </div>
+              </a>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Геометрия колес (2 раза x1500тг)</div>
+                  <div class="coupon_row"><span class="cross">3 000тг</span> <span>2 000тг</span></div>
+                </div>
+              </a>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Шиномонтаж (2 раза x4500тг)</div>
+                  <div class="coupon_row"><span class="cross">9 000тг</span> <span>6 000тг</span></div>
+                </div>
+              </a>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Эвакуатор (1 раз)</div>
+                  <div class="coupon_row"><span class="cross">15 000тг</span> <span>10 000тг</span></div>
+                </div>
+              </a>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Отогрев, завод машины (1 раз)</div>
+                  <div class="coupon_row"><span class="cross">15 000тг</span> <span>10 000тг</span></div>
+                </div>
+              </a>              
+            </div>
+            
+            <!-- Column #3 -->
+            <div class="coupon_col">
+              <div class="coupon_title">
+                Кроссовер
+              </div>
+              <div class="coupon_head" style="background: url('./img/crossover.png') no-repeat center; "></div>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Химчистка салона с разбором (1 раз)<br></div>
+                  <div class="coupon_row"><span class="cross">13 000тг</span> <span>10 000тг</span></div>
+                </div>
+              </a>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Мойка автомобиля кузов+салон (12 раз x1500тг)</div>
+                  <div class="coupon_row"><span class="cross">18 000тг</span> <span>12 000тг</span></div>
+                </div>
+              </a>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Полировка кузова (1 раз)</div>
+                  <div class="coupon_row"><span class="cross">20 000тг</span> <span>15 000тг</span></div>
+                </div>
+              </a>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Полная диагностика автомобиля (2 раза x4000тг)</div>
+                  <div class="coupon_row"><span class="cross">8 000тг</span> <span>4 000тг</span></div>
+                </div>
+              </a>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Замена воздушного фильтра (1 раз)</div>
+                  <div class="coupon_row"><span class="cross">500тг</span> <span>250тг</span></div>
+                </div>
+              </a>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Замена масла в двигателе (2 раз x1000тг)</div>
+                  <div class="coupon_row"><span class="cross">2 000тг</span> <span>1 000тг</span></div>
+                </div>
+              </a> 
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Замена масла в коробке передач (1 раз)</div>
+                  <div class="coupon_row"><span class="cross">15 000тг</span> <span>10 000тг</span></div>
+                </div>
+              </a>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Замена топливного фильтра (1 раз)</div>
+                  <div class="coupon_row"><span class="cross">1 500тг</span> <span>1 000тг</span></div>
+                </div>
+              </a>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Геометрия колес (2 раза x1500тг)</div>
+                  <div class="coupon_row"><span class="cross">3 000тг</span> <span>2 000тг</span></div>
+                </div>
+              </a>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Шиномонтаж (2 раза x4500тг)</div>
+                  <div class="coupon_row"><span class="cross">9 000тг</span> <span>6 000тг</span></div>
+                </div>
+              </a>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Эвакуатор (1 раз)</div>
+                  <div class="coupon_row"><span class="cross">15 000тг</span> <span>10 000тг</span></div>
+                </div>
+              </a>
+              <a class="inline" href="./services/chemical.html">
+                <div class="coupon_box">
+                  <div class="coupon_row">Отогрев, завод машины (1 раз)</div>
+                  <div class="coupon_row"><span class="cross">15 000тг</span> <span>10 000тг</span></div>
+                </div>
+              </a>              
+            </div>
+            <center>
+            <a href="#buy1" style="text-decoration: none; line-height:100px;"><span id="red_big"><b>всего за 4999 тг</b></span></a>
+            </center>        
       </div>
     </section>
    <!-- Buy -->

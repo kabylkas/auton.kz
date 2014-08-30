@@ -25,6 +25,8 @@ CONTENTS:
 /* ---------------------------------------------------------------------------------------------------------- 
 01 Sensible defaults ----------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
+
+
 div{
   -webkit-transition: all 0.3s ease;
      -moz-transition: all 0.3s ease;
@@ -72,9 +74,17 @@ div{
 .coupon_col {
   width: 33%;
   float: left;
-  height: 800px;
+  height: 600px;
 }
 
+.coupon_sel {
+  width: 33%;
+  float: left;
+}
+
+hr {
+  border: 1px solid yellow;
+}
 .coupon_box span {
   font-size: 130%;
   line-height: 1.5;
@@ -428,7 +438,6 @@ html, body {
 
 #red_big:hover {
   color: #f0c000;
-  font-size: 61px;
   font-family: 'PT Sans Narrow', sans-serif;
 }
 

@@ -19,11 +19,11 @@ $error = 'No error';
     <meta name="author" content="">
     <!-- Styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
     <link rel='stylesheet' id='prettyphoto-css'  href="css/prettyPhoto.css" type='text/css' media='all'>
     <link href="./jquery.bxslider.css" rel="stylesheet" />
     <link rel="stylesheet" href="./fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
     <link href="css/fontello.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <!--[if lt IE 7]>
             <link href="css/fontello-ie7.css" type="text/css" rel="stylesheet">  
         <![endif]-->
@@ -55,6 +55,27 @@ $error = 'No error';
     <script type="text/javascript" src="./fancybox/jquery.fancybox-1.3.4.js"></script>
     <script type="text/javascript" src="./jquery.bxslider.min.js"></script>
     <!-- prettyPhoto Initialization -->
+    <style>
+.bx-wrapper .bx-pager {
+  bottom: -95px;
+}
+
+.bx-wrapper .bx-pager a {
+  border: solid #ccc 1px;
+  display: block;
+  margin: 0 5px;
+  padding: 3px;
+}
+
+.bx-wrapper .bx-pager a:hover,
+.bx-wrapper .bx-pager a.active {
+  border: solid #5280DD 1px;
+}
+
+.bx-wrapper {
+  margin-bottom: 120px;
+}
+</style>
     <script type="text/javascript" charset="utf-8">
           $(document).ready(function() {
             /* Using custom settings */
@@ -93,19 +114,24 @@ $error = 'No error';
               }
             });
           });     
-
+          
           $(document).ready(function(){
-            $('.bxslider').bxSlider({
-              auto: true,
-              infiniteLoop: true,
-              pause: 3000
+            var slider = $('.bxslider').bxSlider({
+              pagerLocation: 'top',
+              infiniteLoop: false,
+              hideControlOnEnd: true,
+              controls: false
             }
             );
-          });          
+          });
+          
+        $('#truck').click(function(event){
+          event.preventDefault();
+          slider.goToSlide(1);
+        });    
     </script>
     <script type="text/javascript">
     <!--
-
     function submit_form(button)
     {
         if (document.contact_form.yourname.value == "")
@@ -178,6 +204,7 @@ $error = 'No error';
       <div class="container">
         <h1>Приобрети 1 купон и получи скидку 38 000 тенге на 12 самых необходимых услуг для твоего автомобиля: </h1>
         <h2>Мы считаем что каждый автомобилист заслуживает такой скидки!</h2><br>
+        <a href="javascript:" >Slide2</a>
         <ul class="bxslider">
           <li>
             <!--row1-->

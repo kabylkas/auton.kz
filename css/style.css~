@@ -25,6 +25,26 @@ CONTENTS:
 /* ---------------------------------------------------------------------------------------------------------- 
 01 Sensible defaults ----------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
+.bx-wrapper .bx-pager {
+  bottom: -95px;
+}
+
+.bx-wrapper .bx-pager a {
+  border: solid #ccc 1px;
+  display: block;
+  margin: 0 5px;
+  padding: 3px;
+}
+
+.bx-wrapper .bx-pager a:hover,
+.bx-wrapper .bx-pager a.active {
+  border: solid #5280DD 1px;
+}
+
+.bx-wrapper {
+  margin-bottom: 120px;
+}
+
 div{
   -webkit-transition: all 0.3s ease;
      -moz-transition: all 0.3s ease;
@@ -38,7 +58,7 @@ div{
   color: #0b333f;
   background-color: #CCCCCC;
   text-align:center;
-  width: 100%;
+  width: 90%;
   height: 70px;
   float: left;
   margin: 10px;
@@ -72,9 +92,17 @@ div{
 .coupon_col {
   width: 33%;
   float: left;
-  height: 800px;
+  height: 600px;
 }
 
+.coupon_sel {
+  width: 33%;
+  float: left;
+}
+
+hr {
+  border: 1px solid yellow;
+}
 .coupon_box span {
   font-size: 130%;
   line-height: 1.5;
@@ -419,6 +447,16 @@ html, body {
   color: rgb(158, 32, 33);
   font-size: 60px;
   font-family: 'PT Sans Narrow', sans-serif;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#red_big:hover {
+  color: #f0c000;
+  font-family: 'PT Sans Narrow', sans-serif;
 }
 
 #headerwrap input[type=text] {
@@ -520,8 +558,8 @@ section.single-page h1 {
 
 .round-button:hover {
     text-decoration:none;
-    background: #0b333f;
     color: #cfdcec;
+    background: #0b333f;
 }
 
 /*

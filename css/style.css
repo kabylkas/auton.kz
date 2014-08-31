@@ -345,6 +345,22 @@ ul#menu-main > li > a.zakaz {
 	-moz-border-radius: 3px;
 }
 
+.zakaz {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-weight: normal;
+	font-size: 2em;
+	color: black;
+	background: #f0bf00;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.zakaz:hover {
+  text-decoration: none;
+}
 ul#menu-main > li > a:hover {
 	background: #f0bf00;
 	border-radius: 3px;
@@ -459,9 +475,11 @@ html, body {
 }
 
 #explanation #discount_explain {
-  font-size: 200%;
+  font-size: 150%;
   color: #0b333f;
   line-height: 35px;
+  width: 50%;
+  float: left;
 }
 
 #explanation #discount_explain ul{
@@ -472,15 +490,22 @@ html, body {
   line-height: 40px;
 }
 
-#explanation #counter{
+#explanation #discount_explain .red {
+  font-size: 200%;
+}
+
+#explanation #counter_explain{
+  padding-top: 50px;
   font-size: 250%;
   color: red;
   line-height: 45px;
+  clear: both;
+  text-align: center;
 }
 
 #company_moto {
   color: #0b333f;
-  font-size: 40px;
+  font-size: 200%;
   font-family: 'PT Sans Narrow', sans-serif;
   text-shadow: 2px 2px 2px #333333;
   line-height: 50px;
@@ -488,7 +513,7 @@ html, body {
 
 #company_desc {
   color: #0b333f;
-  font-size: 30px;
+  font-size: 135%;
   font-family: 'PT Sans Narrow', sans-serif;
   text-shadow: 2px 2px 2px #333333;
 }

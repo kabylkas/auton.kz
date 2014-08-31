@@ -25,25 +25,7 @@ CONTENTS:
 /* ---------------------------------------------------------------------------------------------------------- 
 01 Sensible defaults ----------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
-.bx-wrapper .bx-pager {
-  bottom: -95px;
-}
 
-.bx-wrapper .bx-pager a {
-  border: solid #ccc 1px;
-  display: block;
-  margin: 0 5px;
-  padding: 3px;
-}
-
-.bx-wrapper .bx-pager a:hover,
-.bx-wrapper .bx-pager a.active {
-  border: solid #5280DD 1px;
-}
-
-.bx-wrapper {
-  margin-bottom: 120px;
-}
 
 div{
   -webkit-transition: all 0.3s ease;
@@ -53,6 +35,29 @@ div{
           transition: all 0.3s ease;
 }
 
+.coupon_head {
+  color: #0b333f;
+  background-color: #CCCCCC;
+  text-align:center;
+  width: 90%;
+  height: 140px;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+  font-size: 130%;
+  border-radius: 10px;
+}
+
+.coupon_title {
+  color: #0b333f;
+  text-align:center;
+  width: 90%;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+  font-size: 200%;
+  border-radius: 10px;
+}
 
 .coupon_box {
   color: #0b333f;
@@ -90,9 +95,16 @@ div{
 }
 
 .coupon_col {
+  border-radius: 10px;
   width: 33%;
   float: left;
-  height: 600px;
+  height: 1560px;
+}
+
+.coupon_col:hover{
+  background-color: #FFFFFF;
+  width: 33%;
+  float: left;
 }
 
 .coupon_sel {
@@ -101,7 +113,7 @@ div{
 }
 
 hr {
-  border: 1px solid yellow;
+  border: 1px solid black;
 }
 .coupon_box span {
   font-size: 130%;
@@ -333,6 +345,19 @@ ul#menu-main > li > a.zakaz {
 	-moz-border-radius: 3px;
 }
 
+.zakaz {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-weight: normal;
+	font-size: 2em;
+	color: black;
+	background: #f0bf00;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
 ul#menu-main > li > a:hover {
 	background: #f0bf00;
 	border-radius: 3px;
@@ -436,11 +461,64 @@ html, body {
 	position: relative;
 }
 
+#explanation {
+	background-color: rgb(255, 255, 255);
+}
+
+#explanation #mistake_explain {
+  font-size: 200%;
+  color: #0b333f;
+  line-height: 35px;
+}
+
+#explanation #discount_explain {
+  font-size: 150%;
+  color: #0b333f;
+  line-height: 35px;
+  width: 50%;
+  float: left;
+}
+
+#explanation #discount_explain ul{
+  padding-left: 50px;
+}
+
+#explanation #discount_explain ul > li{
+  line-height: 40px;
+}
+
+#explanation #discount_explain .red {
+  font-size: 200%;
+}
+
+#explanation #counter_explain{
+  padding-top: 50px;
+  font-size: 250%;
+  color: red;
+  line-height: 45px;
+  clear: both;
+  text-align: center;
+}
+
 #company_moto {
   color: #0b333f;
-  font-size: 60px;
+  font-size: 200%;
   font-family: 'PT Sans Narrow', sans-serif;
   text-shadow: 2px 2px 2px #333333;
+  line-height: 50px;
+}
+
+#company_desc {
+  color: #0b333f;
+  font-size: 135%;
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-shadow: 2px 2px 2px #333333;
+}
+
+#company_desc li {
+    line-height: 35px;
+    text-transform: none;
+    padding-left: 100px;
 }
 
 #red_big {
@@ -458,36 +536,38 @@ html, body {
   color: #f0c000;
   font-family: 'PT Sans Narrow', sans-serif;
 }
+#headerwrap input {
+	transition: all 0.15s ease-in-out;
+	-moz-transition: all 0.15s ease-in-out;
+	-webkit-transition: all 0.15s ease-in-out;
+}
 
 #headerwrap input[type=text] {
+  margin: 10px;
 	background: rgba(227, 231, 228, 1);
 	font-family: 'PT Sans Narrow', sans-serif;
 	font-size: 1.5em;
 	border: 0;
-	text-align: center;
 	vertical-align: middle;
 	margin-bottom:0 !important;
 }
 #headerwrap input[type=text]:focus {
-	background: #43413e;
-	color: #eff1ef;
-	transition: background 0.25 ease-in;
-	-moz-transition: background 0.25 ease-in;
-	-webkit-transition: background 0.25 ease-in;
+	background: #CCCCCC;
+	color: #000000;
 }
 #headerwrap input[type=text] {
 	height: 2.9em;
-	width:50%;
+	width:90%;
 }
 #headerwrap input[type=submit] {
 	font-family: 'PT Sans Narrow', sans-serif;
-	color: #fff;
+	color: #000;
 	width: 185px;
 	height: 2.9em;
 	font-size: 1.3125em; /* 21px */
 	padding:0.5em;
 	letter-spacing: 0.05em;
-	margin: 0;
+	margin: 10px;
 	border: 0;
 	text-transform: none;
 	background: #f0bf00 !important;
@@ -496,7 +576,7 @@ html, body {
 	-webkit-border-radius: 3px;
 }
 #headerwrap input[type=submit]:hover, #headerwrap input[type=submit]:active {
-	background: #43413e !important;
+	background: #f0bf44 !important;
 }
 /*========== Social Icons ==========*/
 ul.icon {
@@ -531,6 +611,26 @@ section.single-page h1 {
 #services {
   padding-top: 100px;
   z-index: 500;
+
+}
+
+.order_form {
+  background: #0b333f;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+}
+
+.order_form #form_title {
+  color: #123;
+  font-size: 200%;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #FFFFFF;
+	text-transform: none;
 
 }
 

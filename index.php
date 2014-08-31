@@ -46,7 +46,11 @@ $error = 'No error';
     <!-- Favicon -->
     <link rel="shortcut icon" href="./img/icon.ico">
     <!-- JQuery -->
+    <link href="./src/jquery.counter-analog.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="./src/jquery.counter-analog2.css" media="screen" rel="stylesheet" type="text/css" />
+
     <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="./src/jquery.counter.js" type="text/javascript"></script>
     <!-- Load ScrollTo -->
     <script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
     <!-- Load LocalScroll -->
@@ -187,7 +191,7 @@ $error = 'No error';
       <table id="moto_box">
         <tr>
           <td style="width:50%">
-            <span id="company_name"><img style="width:350px;" src="./img/logo.png"></span><br><br><br>
+            <span id="company_name"><img style="width:30%;" src="./img/logo.png"></span><br>
             <span id="company_moto">Полный уход за твоим авто с экономией 38 000 тг</span><br><br><br>
             <div style="text-align: left;">
             <ul id="company_desc">
@@ -197,20 +201,22 @@ $error = 'No error';
             </ul>
             </div>
         
-            <a href="#explanation" class="button_next">Узнать больше</a><br><br><br>
+          <a href="#explanation" class="button_next">Узнать больше</a><br><br><br>
           </td>
           <td style="width:50%">
-            <div class="order_form">
-              <div id="form_title">Получи свою дисконтную карту всего за 4999тг</div>
-              <div style="padding:30px;">
-              <form action="" >
-                <input type="text" name="yourname" placeholder="Имя"  title="твое имя"><br>
-                <input type="text" name="yourphone" placeholder="Телефон"  title="твой телефон"><br>
-                <input type="text" name="youraddress" placeholder="Адрес"  title="твое адрес"><br><br>
-                <input type="submit" value="ЗАКАЗАТЬ">
-              </form>
+            <center>
+              <div class="order_form">
+                <div id="form_title">Получи свою дисконтную карту всего за 4999тг</div>
+                <div style="padding:30px;">
+                <form action="" >
+                  <input type="text" name="yourname" placeholder="Имя"  title="твое имя"><br>
+                  <input type="text" name="yourphone" placeholder="Телефон"  title="твой телефон"><br>
+                  <input type="text" name="youraddress" placeholder="Адрес"  title="твое адрес"><br><br>
+                  <input type="submit" value="ЗАКАЗАТЬ">
+                </form>
+                </div>
               </div>
-            </div>
+            </center>
           </td>
         </tr>
       </table>
@@ -221,36 +227,52 @@ $error = 'No error';
     <section id="explanation" class="single-page scrollblock">
       <h2></h2>
       <div class="container">
-        <div style="width:100%; text-align:center;"><img src="./img/valeriyanka.png"></div>
-        <div id="mistake_explain">Но вы же не делаете ошибок? Есть автосервисы, которые вы обязаны предоставлять вашему авто каждый год, чтобы содержать его в хорошей форме. Auton собрал именно эти сервисы в одной дисконтной карте. Вы тратите тысячи тенге для предоставления этих услуг. Но если вы хотите тратить меньше, тогда не упустите свою выгоду! Ведь с Auton вы сэкономите 38 000 тг в год.</div>
+        <div style="width:100%; text-align:center;"><img src="./img/valeriyanka.png"></div><br>
+        <div id="mistake_explain">Но вы же не делаете ошибок?! Существуют такие виды услуг автосервиса, которыми вы обязательно воспользуетесь в течение года для поддержания вашего авто в рабочем состоянии. Auton собрал именно эти сервисы в одной дисконтной карте. Согласитесь, годовое обслуживание вашего авто обходится вам в круглую сумму. Но если вы хотите тратить меньше, не упустите свою выгоду! Ведь с Auton вы сэкономите 38 000 тг в год.</div>
         <br>
         <div id="discount_explain">
-          Вот где вы сэкономите:<br><br>
+          Вот где вы сможете сэкономить:<br><br>
           <ul>
-            <li>Химчистка салона с разбором (экономия: 3 000тг)</li>
-            <li>Мойка автомобиля кузов+салон [12 раз] (экономия: 6 000тг)</li>
-            <li>Полировка кузова (экономия: 5 000тг)</li>
-            <li>Полная диагностика автомобиля [2 раза] (экономия: 4 000тг)</li>
-            <li>Замена воздушного фильтра (экономия: 250тг)</li>
-            <li>Замена масла в двигателе [2 раз] (экономия: 1 000тг)</li>
-            <li>Замена масла в коробке передач (экономия: 5 000тг)</li>
-            <li>Замена топливного фильтра (экономия: 500тг)</li>
-            <li>Геометрия колес [2 раза] (экономия: 1 000тг)</li>
-            <li>Шиномонтаж [2 раза] (экономия: 3 000тг)</li>
-            <li>Эвакуатор (экономия: 5 000тг)</li>
-            <li>Отогрев, завод машины (экономия: 5 000тг)</li>
+            <li>Химчистка салона с разбором <b>(экономия: 3 000тг)</b></li>
+            <li>Мойка автомобиля кузов+салон [12 раз] <b>(экономия: 6 000тг)</b></li>
+            <li>Полировка кузова <b>(экономия: 5 000тг)</b></li>
+            <li>Полная диагностика автомобиля [2 раза] <b>(экономия: 4 000тг)</b></li>
+            <li>Замена воздушного фильтра <b>(экономия: 250тг)</b></li>
+            <li>Замена масла в двигателе [2 раза] <b>(экономия: 1 000тг)</b></li>
+            <li>Замена масла в коробке передач <b>(экономия: 5 000тг)</b></li>
+            <li>Замена топливного фильтра <b>(экономия: 500тг)</b></li>
+            <li>Геометрия колес [2 раза] <b>(экономия: 1 000тг)</b></li>
+            <li>Шиномонтаж [2 раза] <b>(экономия: 3 000тг)</b></li>
+            <li>Эвакуатор <b>(экономия: 5 000тг)</b></li>
+            <li>Отогрев, завод машины <b>(экономия: 5 000тг)</b></li>
           </ul>
+          ==================================================<br><br>
+          <span class="red">Итого: 38 000тг</span>
         </div>
-        <div id="counter">
+        <div style="width: 45%; float: left;">
+          <center>
+            <img src="./img/total_center.png" style="width: 60%;">
+          </center>
+        </div>
+        <div id="counter_explain">
           Но поторопитесь. Это - очень ограниченное предложение.<br>
-          И его срок истечет через:
+          И его срок истечет через:<br>
+          <span class="counter counter-analog" data-direction="down" style="color:black; font-size: 50%;">2:0:18</span>
+          <script>
+          $('.counter').counter({});
+          </script>
+        </div>
+        <div style="width: 100%; text-align:center; padding-top: 30px;">
+          <center>
+            <a href="#buy1" class="zakaz">ЗАКАЗАТЬ</a>                 
+          </center>
         </div>
       </div>
     </section>
     <!--******************** Services Section ********************-->
     <section id="services" class="single-page scrollblock">
       <div class="container">
-        <h1>Приобрети дисконтную карту и получи скидку 38 000 тенге на 12 самых необходимых услуг для твоего автомобиля: </h1>
+        <h1>Приобрети дисконтную карту и получи скидку 38 000 тенге на 12 самых необходимых услуг для твоего автомобиля. </h1>
         <h2>Мы считаем что каждый автомобилист заслуживает такой скидки!</h2><br>
             <!-- Column #1 -->
             <div class="coupon_col">

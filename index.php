@@ -20,10 +20,10 @@ $error = 'No error';
     <!-- Styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel='stylesheet' id='prettyphoto-css'  href="css/prettyPhoto.css" type='text/css' media='all'>
-    <link href="./jquery.bxslider.css" rel="stylesheet" />
     <link rel="stylesheet" href="./fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
     <link href="css/fontello.css" type="text/css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="./jquery.bxslider.css" rel="stylesheet" />
     <!--[if lt IE 7]>
             <link href="css/fontello-ie7.css" type="text/css" rel="stylesheet">  
         <![endif]-->
@@ -33,6 +33,7 @@ $error = 'No error';
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=latin,cyrillic' rel='stylesheet' type='text/css'>    
+    <link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <style>
     body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -54,32 +55,20 @@ $error = 'No error';
     <!-- Load ScrollTo -->
     <script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
     <!-- Load LocalScroll -->
+    <script type="text/javascript" src="./jquery.bxslider.js"></script>
     <script type="text/javascript" src="js/jquery.localscroll-1.2.7-min.js"></script>
     <script type="text/javascript" src="./fancybox/jquery.fancybox-1.3.4.pack.js"></script>
     <script type="text/javascript" src="./fancybox/jquery.fancybox-1.3.4.js"></script>
     <!-- prettyPhoto Initialization -->
-    <style>
-.bx-wrapper .bx-pager {
-  bottom: -95px;
-}
-
-.bx-wrapper .bx-pager a {
-  border: solid #ccc 1px;
-  display: block;
-  margin: 0 5px;
-  padding: 3px;
-}
-
-.bx-wrapper .bx-pager a:hover,
-.bx-wrapper .bx-pager a.active {
-  border: solid #5280DD 1px;
-}
-
-.bx-wrapper {
-  margin-bottom: 120px;
-}
-</style>
+  
     <script type="text/javascript" charset="utf-8">
+          if (screen.width <= 699) {
+            document.location = "http://auton.kz/m/";
+          }
+          if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+             location.replace("http://auton.kz/m/");
+          }
+          
           $(document).ready(function() {
             /* Using custom settings */
             $("a.inline").fancybox({
@@ -119,19 +108,14 @@ $error = 'No error';
           });     
           
           $(document).ready(function(){
-            var slider = $('.bxslider').bxSlider({
-              pagerLocation: 'top',
-              infiniteLoop: false,
-              hideControlOnEnd: true,
-              controls: false
-            }
+              $('.bxslider').bxSlider({
+                auto: true,
+                adaptiveHeight: true,
+                infiniteLoop: true,
+                pause: 6000
+              }
             );
           });
-          
-        $('#truck').click(function(event){
-          event.preventDefault();
-          slider.goToSlide(1);
-        });    
     </script>
     <script type="text/javascript">
     <!--
@@ -625,6 +609,63 @@ $error = 'No error';
         <!-- /.row -->
       </div>
       <!-- /.container -->
+    </section>
+    <!--******************** Testimonials Section ********************-->
+    <section id="testim" class="single-page scrollblock">
+      <div class="container">
+        <ul class="bxslider">
+          <!-- Testim 1 -->
+          <li>
+            <div class="testim_wrap">
+              <div class="testim_pic">
+                <img src="./img/testim1.png">
+              </div>
+              <div class="testim_text">
+                <div class="testim_words">
+                  Это невероятно! Я действительно сэкономил  38000 тенге. Я рекомендую Auton!
+                </div>
+                <div class="testim_name">
+                  Н.Назарбаев
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <!-- Testim 2 -->
+          <li>
+            <div class="testim_wrap">
+              <div class="testim_pic">
+                <img src="./img/testim2.png">
+              </div>
+              <div class="testim_text">
+                <div class="testim_words">
+                  Будьте счастливы!
+                </div>
+                <div class="testim_name">
+                  Ганди
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <!-- Testim 3 -->
+          <li>
+            <div class="testim_wrap">
+              <div class="testim_pic">
+                <img src="./img/testim3.png">
+              </div>
+              <div class="testim_text">
+                <div class="testim_words">
+                  Мы не утописты. Мы знаем, что любой чернорабочий и любая кухарка заслуживает скидки 38000 тенге.
+                </div>
+                <div class="testim_name">
+                  Ленин
+                </div>
+              </div>
+            </div> 
+          </li>
+        </ul>
+      </div>
     </section>
     <!--******************** Contact Section ********************-->
     <section id="contacting" class="contact single-page scrollblock">

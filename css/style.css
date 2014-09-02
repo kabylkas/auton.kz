@@ -100,7 +100,46 @@ div{
   border-radius: 10px;
 }
 
+.coupon_hover {
+  z-index:1;
+  background-color: #CCCCCC;
+  color: #0b333f;
+  text-align:center;
+  width: 90%;
+  height: 70px;
+  float: left;
+  margin: 10px;
+  padding-top: 10px;
+  font-size: 130%;
+  border-radius: 10px;
+  margin-top: -100px;
+  opacity: 0;
+}
+
+.coupon_hover:hover {
+  opacity: 1;
+}
+
+.coupon_hover .coupon_hover_up{
+  height: 50%;
+  padding-left:10px;
+  z-index:0;
+  width: 100%;
+}
+
+.coupon_hover .coupon_hover_down{
+  width: 100%;
+  height: 50%;
+  z-index:0;
+  padding-top:12px; 
+  background-color: #f0bf00;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
 .coupon_box {
+  z-index:-1;
   color: #0b333f;
   background-color: #CCCCCC;
   text-align:center;
@@ -113,17 +152,6 @@ div{
   border-radius: 10px;
 }
 
-.coupon_box:hover {
-  background-color: #AAABBB;
-}
-
-.coupon_box img {
-  position:absolute;
-  left:0px;
-  top:0px;
-  z-index: -11;  
-}
-
 .coupon_box .cross {
   font-size: 130%;
   line-height: 1.5;
@@ -133,6 +161,7 @@ div{
 
 .coupon_box .coupon_row {
   height: 50%;
+  z-index:0;
 }
 
 .coupon_col {
@@ -140,6 +169,7 @@ div{
   width: 33%;
   float: left;
   height: 1560px;
+  z-index:0;
 }
 
 .coupon_col:hover{
@@ -562,7 +592,7 @@ html, body {
 #company_desc li {
     line-height: 35px;
     text-transform: none;
-    padding-left: 100px;
+    padding-left: 15%;
 }
 
 #red_big {

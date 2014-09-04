@@ -13,59 +13,61 @@ session_start();
 require('formkey.class.php');
 //Start the class
 $formKey = new formKey();
- 
+$sale = 0;
 $error = 0;
 
 //Is request?
-if ($_SESSION["was"] == 1) 
-{
-  header("Location: http://10.1.71.164/auton.kz/");  
-}
-elseif($_SERVER['REQUEST_METHOD'] == 'POST')
-{
-    //Validate the form key
-    if(!isset($_POST['form_key']) || !$formKey->validate())
-    {
-        //Form key is invalid, show an error
-        $error = 1;
-    }
-    else
-    {   
-        //Do the rest of your validation here
-        $error = 'No form key error!';
-        require_once('config.php');
-        $con = mysqli_connect($db_host, $username , $password, $db) or die(mysqli_error());
-        $name = mysqli_real_escape_string($con, $_POST['yourname']);
-        $phone = mysqli_real_escape_string($con, $_POST['yourphone']);
-        $email = mysqli_real_escape_string($con, $_POST['youremail']);
-        $option = mysqli_real_escape_string($con, $_POST['option']);
-        if ($option == "take_yourself") {
-          $take_yourself = 1;
-          $bring_me = 0;
-        } elseif ($option == "bring_me") {
-          $take_yourself = 0;
-          $bring_me = 1;
-        } else {
-          $take_yourself = 0;
-          $bring_me = 0;
-        }
-        
-        if (mysqli_connect_errno()) {
-          echo "Failed to connect to MySQL: " . mysqli_connect_error();
-        }
-        
-        do {
-          $conf_number = generateRandomString(12);
-          $query = "SELECT * from $table where conf_number = '$conf_number'";
-          $result = mysqli_query($con, $query);
-          $rows = $result->num_rows;
-        } while ($rows>0);
-        
-        $query = "INSERT INTO $table (name, email, phone, conf_number, take_yourself, bring_me) VALUES ('$name', '$email','$phone', '$conf_number', $take_yourself, $bring_me)";
-        mysqli_query($con, $query) or die(mysqli_error());
-    }
-} else {
-  $error = 1;
+if ($sale == 1) {
+  if ($_SESSION["was"] == 1) 
+  {
+    header("Location: http://10.1.71.164/auton.kz/");  
+  }
+  elseif($_SERVER['REQUEST_METHOD'] == 'POST')
+  {
+      //Validate the form key
+      if(!isset($_POST['form_key']) || !$formKey->validate())
+      {
+          //Form key is invalid, show an error
+          $error = 1;
+      }
+      else
+      {   
+          //Do the rest of your validation here
+          $error = 'No form key error!';
+          require_once('config.php');
+          $con = mysqli_connect($db_host, $username , $password, $db) or die(mysqli_error());
+          $name = mysqli_real_escape_string($con, $_POST['yourname']);
+          $phone = mysqli_real_escape_string($con, $_POST['yourphone']);
+          $email = mysqli_real_escape_string($con, $_POST['youremail']);
+          $option = mysqli_real_escape_string($con, $_POST['option']);
+          if ($option == "take_yourself") {
+            $take_yourself = 1;
+            $bring_me = 0;
+          } elseif ($option == "bring_me") {
+            $take_yourself = 0;
+            $bring_me = 1;
+          } else {
+            $take_yourself = 0;
+            $bring_me = 0;
+          }
+          
+          if (mysqli_connect_errno()) {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+          }
+          
+          do {
+            $conf_number = generateRandomString(12);
+            $query = "SELECT * from $table where conf_number = '$conf_number'";
+            $result = mysqli_query($con, $query);
+            $rows = $result->num_rows;
+          } while ($rows>0);
+          
+          $query = "INSERT INTO $table (name, email, phone, conf_number, take_yourself, bring_me) VALUES ('$name', '$email','$phone', '$conf_number', $take_yourself, $bring_me)";
+          mysqli_query($con, $query) or die(mysqli_error());
+      }
+  } else {
+    $error = 1;
+  }
 }
 ?>
 <html>
@@ -88,7 +90,14 @@ elseif($_SERVER['REQUEST_METHOD'] == 'POST')
 <body style="background-color: rgb(221, 221, 221);">
 <div id="box">
   <?php
-    if ($error == 0){
+    if ($sale == 0) {
+      echo '<h2>Мы очень благодарны за проявленный интерес к нашему сервису!<br>
+      На данный момент все дисконтные карты распроданы.<br>
+      Но не унывайте, мы активно работаем. Зайдите на наш сайт через 2 <br>
+      недели, и станьте одним из первых покупателей дисконтной карты Auton.</h2><br>
+      <a href="http://auton.kz/#buy1">Вернуться на главную</a>
+      ';
+    } else if ($error == 0){
   ?>
   <h2>Номер заказа: <b><?php echo $conf_number; ?></b></h2><br>
   Мы очень благодарны за проявленный интерес к нашему сервису!<br>

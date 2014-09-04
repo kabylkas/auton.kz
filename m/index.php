@@ -1,4 +1,7 @@
-﻿<html>
+﻿<?php
+  require('./usersontxt.php');
+?>
+<html>
 <head>
   <meta charset="utf-8">
   <title>Auton.kz</title>

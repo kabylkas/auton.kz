@@ -2,7 +2,7 @@
 // Script Online Users and Visitors - http://coursesweb.net/php-mysql/
 if(!isset($_SESSION)) session_start();        // start Session, if not already started
 
-$filetxt = 'userson.txt';  // the file in which the online users /visitors are stored
+$filetxt = '../userson.txt';  // the file in which the online users /visitors are stored
 $timeon = 120;             // number of secconds to keep a user online
 $sep = '^^';               // characters used to separate the user name and date-time
 $vst_id = '-vst-';         // an identifier to know that it is a visitor, not logged user

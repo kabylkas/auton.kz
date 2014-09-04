@@ -3,6 +3,7 @@
 session_start();
 //Require the class
 require('./formkey.class.php');
+require('./usersontxt.php');
 //Start the class
 $formKey = new formKey();
 $_SESSION["was"] = 0;
@@ -242,7 +243,7 @@ $error = 'No error';
         <div id="counter_explain">
           Но поторопитесь. Это - очень ограниченное предложение.<br>
           И его срок истечет через:<br>
-          <span class="counter counter-analog" data-direction="down" style="color:black; font-size: 50%;">2:0:18</span>
+          <span class="counter counter-analog" data-direction="down" style="color:black; font-size: 50%;">0:0:18</span>
           <script>
           $('.counter').counter({});
           </script>
@@ -757,23 +758,6 @@ $error = 'No error';
     <section id="testim" class="single-page scrollblock">
       <div class="container">
         <ul class="bxslider">
-          <!-- Testim 1 -->
-          <li>
-            <div class="testim_wrap">
-              <div class="testim_pic">
-                <img src="./img/testim1.png">
-              </div>
-              <div class="testim_text">
-                <div class="testim_words">
-                  Это невероятно! Я действительно сэкономил  38000 тенге. Я рекомендую Auton!
-                </div>
-                <div class="testim_name">
-                  Кайрат Нуртас
-                </div>
-              </div>
-            </div>
-          </li>
-          
           <!-- Testim 2 -->
           <li>
             <div class="testim_wrap">

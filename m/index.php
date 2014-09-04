@@ -8,11 +8,10 @@
   
   <!-- Style -->
   <link href="css/style.css" rel="stylesheet">
+  
   <!-- Fonts -->
   <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=latin,cyrillic' rel='stylesheet' type='text/css'>    
   <link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="../img/icon.ico">
 </head>
 <body>
   <section id="headerwrap">
